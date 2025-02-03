@@ -33,4 +33,11 @@ public class CreateDataController {
     }
 
 
+    @GetMapping(path ="/getStyle1")
+    public StyleResponse getStyle1(@RequestParam int productId,@RequestParam String productType) {
+        StyleResponse responseData= createDataService.getStyle(productId,productType);
+        return responseData;
+    }
+
+
 }
